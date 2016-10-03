@@ -38,3 +38,19 @@ function populateTable()
 
 
 }
+
+
+function showUserInfo(event)
+{
+	//Prevent link from Firing
+	event.preventDefault;
+
+	//Retrieve username from link rel attribute
+	var thisUserName = $(this).attr('rel');
+
+	//Get Index of object based on id value
+	var arrayPosition = userListData.map(function(arrayItem){
+		return arrayItem.username;
+	}).indexOf(thisUserName);
+
+}
